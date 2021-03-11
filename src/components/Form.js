@@ -1,27 +1,23 @@
 import React, { Component } from 'react';
-import Car from './Car';
+import styled from 'styled-components';
 
+const Title = styled.h1 `
+    color: red;
+    font-size: 80px;
+`
+const Button = styled.button `
+    background-color: black;
+    color: white;
+    padding: 12px 15px;
+` 
 class Form extends Component {
 
-    state = {
-        username: "",
-    }
-
-    handlePseudo = (e) => {
-        
-    }
-
     render() {
+
         return(
             <div>
-                <Car />
-                <h1>Commentaire</h1>
-                
-                <form>
-                    <label>Pseudo</label>
-                    <input type="text" value={this.state.username} onChange={this.handlePseudo}/>
-                </form>
-
+                <Title>Commentaire </Title>
+                <Button className="">Valider</Button>
             </div>
         )
     }
